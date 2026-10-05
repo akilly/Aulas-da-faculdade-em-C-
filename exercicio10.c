@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
 
 int main () {
 	string nome, projeto;
 	int opcao;
-	float valorProjeto, valor;
+	double valorProjeto, valor;
 	char urgente;
 
 	cout << "Digite seu nome: ";
@@ -40,7 +41,7 @@ int main () {
 	}
 			cout << "É urgente? (S/N)\n";
 			cin >> urgente;
-		if(urgente == 'S' || urgente == 's') {
+		if(tolower(urgente) == 's') {
 			valor = valorProjeto * 1.2;
 		} else {
 			valor = valorProjeto;
